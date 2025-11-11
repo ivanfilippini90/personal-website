@@ -42,7 +42,7 @@ const Page = () => {
           href="mailto:johndoe@example.com"
           className="text-xl text-indigo-600 hover:underline"
         >
-          johndoe@example.com
+          ivanfilippini90@proton.me
         </a>
       </section>
 
