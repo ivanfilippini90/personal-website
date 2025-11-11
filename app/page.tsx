@@ -17,7 +17,7 @@ const Page = () => {
       <section className="py-10">
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
           <Image
-            src="/sports-bg.png"
+            src="/sport-bg.png"
             alt="Sports Collage"
             width={900}
             height={500}
