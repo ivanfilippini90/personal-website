@@ -2,87 +2,48 @@ import Image from "next/image";
 
 const Page = () => {
   return (
-    <main className="relative min-h-screen flex flex-col text-white">
-      {/* Background Image */}
-      <Image
-        src="/sports-bg.png"
-        alt="Sports Background"
-        fill
-        priority
-        className="object-cover -z-10"
-      />
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60 -z-10" />
-
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center">
       {/* Header */}
-      <header className="text-center py-20">
-        <h1 className="text-5xl font-extrabold drop-shadow-xl">
+      <header className="text-center py-16">
+        <h1 className="text-5xl font-extrabold text-indigo-400">
           Hello, I'm Ivan Filippini
         </h1>
-        <p className="text-2xl mt-4 font-light drop-shadow-md">
+        <p className="text-2xl mt-4 text-gray-300">
           A passionate web developer & designer
         </p>
       </header>
 
+      {/* Add your sports image here */}
+      <section className="py-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+          <Image
+            src="/sports-bg.png"
+            alt="Sports Collage"
+            width={900}
+            height={500}
+            className="object-cover"
+          />
+        </div>
+      </section>
+
       {/* About Section */}
-      <section className="px-6 py-16 text-center">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg max-w-3xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6 text-indigo-300">
-            About Me
-          </h2>
-          <p className="text-lg leading-relaxed">
-            I'm a front-end developer who loves clean design and intuitive user
-            experiences. I build modern web apps with React and Next.js. When
-            I’m not coding, I explore new tech or creative design ideas.
-          </p>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-16 text-center">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-8 text-indigo-300">
-            Skills
-          </h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-lg">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>HTML & CSS</li>
-            <li>Node.js</li>
-            <li>Git & GitHub</li>
-            <li>UI/UX Design</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="px-4 py-16 text-center">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6 text-indigo-300">
-            Get in Touch
-          </h2>
-          <p className="text-lg mb-4">
-            Feel free to reach out for collaborations, questions, or just to say
-            hi!
-          </p>
-          <a
-            href="mailto:ivanfilippini90@proton.me"
-            className="text-xl text-indigo-300 hover:underline"
-          >
-            ivanfilippini90@proton.me
-          </a>
-        </div>
+      <section className="px-6 py-12 text-center max-w-3xl">
+        <h2 className="text-3xl font-semibold mb-6 text-indigo-300">
+          About Me
+        </h2>
+        <p className="text-lg leading-relaxed text-gray-300">
+          I'm a front-end developer who loves clean design and intuitive user
+          experiences. I build modern web apps with React and Next.js. When I’m
+          not coding, I explore new tech or creative design ideas.
+        </p>
       </section>
 
       {/* Footer */}
-      <footer className="py-6 bg-black/60 text-center">
+      <footer className="mt-auto py-6 text-center text-gray-500">
         <p>Built with ❤️ using Next.js & Tailwind CSS</p>
         <p>&copy; 2025 Ivan Filippini</p>
       </footer>
-    </main>
+    </div>
   );
 };
 
